@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XHR Series - Flexo Printing Machine | VRA Engineering Works</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0f1c3f',
+                            red: '#e63946',
+                            grey: '#f2f2f2',
+                            dark: '#1a1a1a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Oswald', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="text-gray-800 antialiased bg-gray-50">
+    <nav id="main-navbar" class="bg-white sticky top-0 z-50 border-b border-gray-100">
+        <div class="container mx-auto px-4 flex justify-between items-center h-20">
+            <a href="../index.html" class="flex items-center group">
+                <div class="bg-brand-blue rounded-lg px-3 py-2 mr-3 pointer-events-none">
+                    <div class="flex flex-row items-center leading-none text-white font-serif font-bold text-xl">
+                        <span>V</span><span>R</span><span>A</span>
+                    </div>
+                </div>
+                <div class="flex flex-col leading-tight"><span class="text-brand-red font-bold uppercase">Engineering
+                        Works</span></div>
+            </a>
+            <div class="hidden md:flex space-x-8 items-center font-medium">
+                <a href="../index.html" class="text-gray-600 hover:text-brand-blue">Home</a>
+                <a href="index.html" class="text-gray-600 hover:text-brand-blue">Machines</a>
+                <a href="../index.html#contact"
+                    class="bg-brand-blue text-white px-6 py-2.5 rounded-full hover:bg-brand-red font-bold">Enquire</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-gray-100 py-4 border-b border-gray-200">
+        <div class="container mx-auto px-4 text-sm text-gray-500">
+            <a href="../index.html" class="hover:text-brand-blue">Home</a> / <a href="index.html"
+                class="hover:text-brand-blue">Machines</a> / <span class="text-brand-red font-bold">AS-100</span>
+        </div>
+    </div>
+
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 mb-4">
+                        <img src="../assets/img/machines/xhr-flexo.png" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <h1 class="text-4xl font-display font-bold text-brand-blue mb-2">XHR Series Flexo</h1>
+                    <p class="text-xl text-gray-500 mb-6">Flexo Printing Machine with IR Heater Dryer</p>
+                    <div class="bg-blue-50 border-l-4 border-brand-blue p-4 mb-8">
+                        <p class="text-brand-blue font-medium">High precision mesh cylinder printing system with IR
+                            drying. Excellent substitute for mesh printing machines.</p>
+                    </div>
+                    <ul class="space-y-2 mb-8 text-gray-600">
+                        <li>• High precision mesh cylinders for even ink transfer</li>
+                        <li>• Interchangeable cylinders for accurate printing lengths</li>
+                        <li>• High speed printing (60 meters per hour)</li>
+                        <li>• Integrated IR drying system</li>
+                    </ul>
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">Technical Specifications</h3>
+                    <div class="overflow-x-auto mb-8">
+                        <table
+                            class="w-full text-sm text-left text-gray-500 border border-gray-200 rounded-lg whitespace-nowrap">
+                            <thead class="bg-gray-50 text-gray-700 font-bold uppercase">
+                                <tr>
+                                    <th class="px-4 py-3 border-b">Model</th>
+                                    <th class="px-4 py-3 border-b">XHR 2+1</th>
+                                    <th class="px-4 py-3 border-b">XHR 3+1</th>
+                                    <th class="px-4 py-3 border-b">XHR 4+2</th>
+                                    <th class="px-4 py-3 border-b">XHR 6+2</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100">
+                                <tr>
+                                    <th class="px-4 py-3 font-medium text-gray-900">Front Printing</th>
+                                    <td class="px-4 py-3">2 Colours</td>
+                                    <td class="px-4 py-3">3 Colours</td>
+                                    <td class="px-4 py-3">4 Colours</td>
+                                    <td class="px-4 py-3">6 Colours</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <th class="px-4 py-3 font-medium text-gray-900">Back Printing</th>
+                                    <td class="px-4 py-3">1 Colour</td>
+                                    <td class="px-4 py-3">1 Colour</td>
+                                    <td class="px-4 py-3">2 Colour</td>
+                                    <td class="px-4 py-3">2 Colour</td>
+                                </tr>
+                                <tr>
+                                    <th class="px-4 py-3 font-medium text-gray-900">Max Length</th>
+                                    <td class="px-4 py-3">400 mm</td>
+                                    <td class="px-4 py-3">400 mm</td>
+                                    <td class="px-4 py-3">400 mm</td>
+                                    <td class="px-4 py-3">400 mm</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <th class="px-4 py-3 font-medium text-gray-900">Min Length</th>
+                                    <td class="px-4 py-3">108 mm</td>
+                                    <td class="px-4 py-3">108 mm</td>
+                                    <td class="px-4 py-3">108 mm</td>
+                                    <td class="px-4 py-3">108 mm</td>
+                                </tr>
+                                <tr>
+                                    <th class="px-4 py-3 font-medium text-gray-900">Max Width</th>
+                                    <td class="px-4 py-3">150 mm</td>
+                                    <td class="px-4 py-3">150 mm</td>
+                                    <td class="px-4 py-3">150 mm</td>
+                                    <td class="px-4 py-3">150 mm</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <th class="px-4 py-3 font-medium text-gray-900">Max Speed</th>
+                                    <td class="px-4 py-3">60 m/min</td>
+                                    <td class="px-4 py-3">60 m/min</td>
+                                    <td class="px-4 py-3">60 m/min</td>
+                                    <td class="px-4 py-3">60 m/min</td>
+                                </tr>
+                                <tr>
+                                    <th class="px-4 py-3 font-medium text-gray-900">Power (220V)</th>
+                                    <td class="px-4 py-3">3 Kw</td>
+                                    <td class="px-4 py-3">3 Kw</td>
+                                    <td class="px-4 py-3">4 Kw</td>
+                                    <td class="px-4 py-3">4.2 Kw</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <th class="px-4 py-3 font-medium text-gray-900">Weight</th>
+                                    <td class="px-4 py-3">650 Kg</td>
+                                    <td class="px-4 py-3">700 Kg</td>
+                                    <td class="px-4 py-3">750 Kg</td>
+                                    <td class="px-4 py-3">950 Kg</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <a href="https://wa.me/917678627072?text=I am interested in Vertex AS-100" target="_blank"
+                        class="w-full bg-green-500 text-white text-center px-6 py-3 rounded-lg font-bold hover:bg-green-600 shadow block">
+                        Get Pricing via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-brand-blue text-white pt-12 pb-6 border-t border-white/10">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-500 text-sm">© 2024 VRA Engineering Works.</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
