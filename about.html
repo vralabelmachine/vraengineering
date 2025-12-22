@@ -72,7 +72,7 @@
     <nav id="main-navbar" class="bg-white sticky top-0 z-50 border-b border-gray-100 transition-all duration-300">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center h-20">
-                <a href="./" class="flex items-center group">
+                <a href="/" class="flex items-center group">
                     <div
                         class="bg-brand-blue rounded-lg px-3 py-2 mr-3 group-hover:shadow-lg transition-all duration-300">
                         <div class="flex flex-row items-center leading-none text-white font-serif font-bold text-xl">
@@ -86,8 +86,8 @@
                 </a>
 
                 <div class="hidden md:flex space-x-8 items-center font-medium">
-                    <a href="./" class="text-gray-600 hover:text-brand-blue transition-colors">Home</a>
-                    <a href="about" class="text-brand-red">About Us</a>
+                    <a href="/" class="text-gray-600 hover:text-brand-blue transition-colors">Home</a>
+                    <a href="/about" class="text-brand-red">About Us</a>
                     <div class="relative group" x-data="{ open: false }" @mouseenter="open = true"
                         @mouseleave="open = false">
                         <button
@@ -100,10 +100,10 @@
                         </button>
                         <div x-show="open" x-transition
                             class="absolute top-full right-0 w-64 bg-white shadow-xl rounded-b-lg py-2 border-t-2 border-brand-red">
-                            <a href="machines/"
+                            <a href="/machines/"
                                 class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-brand-red">Vertex
                                 Machines</a>
-                            <a href="parts"
+                            <a href="/parts"
                                 class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-brand-red">VRA Custom
                                 Parts</a>
                         </div>
@@ -124,10 +124,10 @@
 
         <div x-show="mobileMenuOpen" x-collapse class="md:hidden bg-white border-t border-gray-100 shadow-inner">
             <div class="flex flex-col px-4 py-4 space-y-4">
-                <a href="./" class="text-gray-600 font-medium">Home</a>
-                <a href="about" class="text-brand-red font-medium">About Us</a>
-                <a href="machines/" class="text-gray-600 font-medium">Vertex Machines</a>
-                <a href="parts" class="text-gray-600 font-medium">Custom Parts</a>
+                <a href="/" class="text-gray-600 font-medium">Home</a>
+                <a href="/about" class="text-brand-red font-medium">About Us</a>
+                <a href="/machines/" class="text-gray-600 font-medium">Vertex Machines</a>
+                <a href="/parts" class="text-gray-600 font-medium">Custom Parts</a>
                 <a href="./#contact" class="text-brand-blue font-bold">Contact Us</a>
             </div>
         </div>
@@ -283,11 +283,11 @@
                 <div>
                     <h4 class="text-lg font-bold mb-6 text-brand-red">Quick Links</h4>
                     <ul class="space-y-3 text-gray-400 text-sm">
-                        <li><a href="./" class="hover:text-white transition-colors">Home</a></li>
-                        <li><a href="about" class="hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="machines/" class="hover:text-white transition-colors">Vertex Machines</a>
+                        <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="/about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="/machines/" class="hover:text-white transition-colors">Vertex Machines</a>
                         </li>
-                        <li><a href="parts" class="hover:text-white transition-colors">Custom Parts</a></li>
+                        <li><a href="/parts" class="hover:text-white transition-colors">Custom Parts</a></li>
                         <li><a href="gallery.html" class="hover:text-white transition-colors">Gallery</a></li>
                         <li><a href="./#contact" class="hover:text-white transition-colors">Contact</a></li>
                     </ul>
@@ -301,8 +301,8 @@
                                 Machines</a></li>
                         <li><a href="machines/" class="hover:text-white transition-colors">Label Folding
                                 Machines</a></li>
-                        <li><a href="parts" class="hover:text-white transition-colors">Precision Cutters</a></li>
-                        <li><a href="parts" class="hover:text-white transition-colors">Heating Elements</a></li>
+                        <li><a href="/parts" class="hover:text-white transition-colors">Precision Cutters</a></li>
+                        <li><a href="/parts" class="hover:text-white transition-colors">Heating Elements</a></li>
                     </ul>
                 </div>
 
