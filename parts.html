@@ -7,6 +7,15 @@
     <title>Custom Parts | VRA Engineering Works</title>
     <meta name="description"
         content="Browse our catalog of 21+ precision-engineered custom parts for garment label machinery. Authorised manufacturer in Delhi.">
+
+    <!-- SEO Meta Tags -->
+    <link rel="canonical" href="https://vraengineering.com/parts.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vraengineering.com/parts.html">
+    <meta property="og:title" content="Custom Parts | VRA Engineering Works">
+    <meta property="og:description"
+        content="Catalog of precision-engineered custom parts including gears, rewinder, cylinders, and more for label machinery.">
+    <meta property="og:image" content="https://vraengineering.com/assets/img/parts/1.png">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -36,11 +45,11 @@
 
 <body class="text-gray-800 antialiased bg-gray-50" x-data="partsCatalog()">
 
-    <!-- Navbar -->
-    <nav id="main-navbar" class="bg-white sticky top-0 z-50 border-b border-gray-100 transition-all duration-300">
+    <!-- Navigation -->
+    <nav id="main-navbar" class="glass-nav sticky top-0 z-50 transition-all duration-300">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center h-20">
-                <a href="index.html" class="flex items-center group">
+                <a href="./" class="flex items-center group">
                     <div
                         class="bg-brand-blue rounded-lg px-3 py-2 mr-3 group-hover:shadow-lg transition-all duration-300">
                         <div class="flex flex-row items-center leading-none text-white font-serif font-bold text-xl">
@@ -53,7 +62,7 @@
                     </div>
                 </a>
                 <div class="hidden md:flex space-x-8 items-center font-medium">
-                    <a href="index.html" class="text-gray-600 hover:text-brand-blue transition-colors">Home</a>
+                    <a href="./" class="text-gray-600 hover:text-brand-blue transition-colors">Home</a>
                     <a href="about.html" class="text-gray-600 hover:text-brand-blue transition-colors">About Us</a>
                     <div class="relative group" x-data="{ open: false }" @mouseenter="open = true"
                         @mouseleave="open = false">
@@ -66,7 +75,7 @@
                         </button>
                         <div x-show="open" x-transition
                             class="absolute top-full right-0 w-64 bg-white shadow-xl rounded-b-lg py-2 border-t-2 border-brand-red">
-                            <a href="machines/index.html"
+                            <a href="machines/"
                                 class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-brand-red">Vertex
                                 Machines</a>
                             <a href="parts.html" class="block px-6 py-3 bg-gray-50 text-brand-red font-bold">VRA Custom
@@ -106,17 +115,16 @@
                 <!-- Loop through parts -->
                 <template x-for="part in parts" :key="part.id">
                     <div @click="openModal(part)"
-                        class="bg-white rounded-lg shadow hover:shadow-xl transition-all duration-300 cursor-pointer group border border-gray-100 overflow-hidden"
+                        class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer group border border-gray-100 overflow-hidden flex flex-col h-full premium-card-hover"
                         data-aos="fade-up">
-                        <div class="aspect-w-16 h-48 overflow-hidden bg-gray-100">
-                            <!-- Placeholder Image Logic -->
+                        <div class="h-56 bg-gray-50 flex items-center justify-center p-6 relative overflow-hidden">
                             <img :src="part.img" :alt="part.name"
-                                class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-500">
+                                class="max-w-full max-h-full object-contain transform group-hover:scale-110 transition-transform duration-700 ease-out">
                         </div>
-                        <div class="p-4 text-center">
-                            <h3 class="font-bold text-brand-blue group-hover:text-brand-red transition-colors"
+                        <div class="p-6 text-center flex-grow flex flex-col justify-between">
+                            <h3 class="font-display font-bold text-brand-blue group-hover:text-brand-red transition-colors text-lg"
                                 x-text="part.name"></h3>
-                            <p class="text-gray-400 text-xs mt-1">Click for details</p>
+                            <p class="text-gray-400 text-xs mt-2 uppercase tracking-widest font-bold">Details</p>
                         </div>
                     </div>
                 </template>

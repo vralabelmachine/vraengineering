@@ -9,7 +9,12 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Oswald', sans-serif;
     letter-spacing: 0.025em;
 }
@@ -43,62 +48,64 @@ html {
     background-size: 20px 20px;
 }
 
-/* Glassmorphism Card */
-.glass-card {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+/* Glassmorphism Navbar */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Hero Overlay */
-.hero-overlay {
-    background: linear-gradient(90deg, rgba(15, 28, 63, 0.95) 0%, rgba(15, 28, 63, 0.8) 50%, rgba(15, 28, 63, 0.4) 100%);
+/* Premium Primary Gradient */
+.bg-premium-blue {
+    background: linear-gradient(135deg, #0f1c3f 0%, #1a365d 100%);
 }
 
-/* Hover Glow */
-.hover-glow {
-    transition: all 0.3s ease;
+/* Premium Card Hover */
+.premium-card-hover {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hover-glow:hover {
-    box-shadow: 0 0 15px rgba(230, 57, 70, 0.3);
-    transform: translateY(-2px);
+.premium-card-hover:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(15, 28, 63, 0.12);
 }
 
-/* Image Aspect Ratio */
-.aspect-w-16 {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
+/* Floating Animation */
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
-.aspect-w-16 img {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    object-fit: cover;
+.animate-floating {
+    animation: floating 3s ease-in-out infinite;
 }
 
-/* Modal Transitions */
-.modal-enter {
-    opacity: 0;
-    transform: scale(0.9);
-}
-.modal-enter-active {
-    opacity: 1;
-    transform: scale(1);
-    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-}
-.modal-exit {
-    opacity: 1;
-    transform: scale(1);
-}
-.modal-exit-active {
-    opacity: 0;
-    transform: scale(0.9);
-    transition: opacity 0.2s ease-in, transform 0.2s ease-in;
+/* Text Shimmer Effect */
+.text-shimmer {
+    background: linear-gradient(90deg, #ffffff 0%, #e63946 50%, #ffffff 100%);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shine 3s linear infinite;
 }
 
-[x-cloak] { display: none !important; }
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+[x-cloak] {
+    display: none !important;
+}
