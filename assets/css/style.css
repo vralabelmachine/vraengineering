@@ -1,0 +1,104 @@
+/* VRA Engineering Works - Custom Styles */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.025em;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0f1c3f;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e63946;
+}
+
+/* Engineering Stripes Pattern */
+.bg-engineering-stripes {
+    background-image: linear-gradient(135deg, #f2f2f2 25%, #ffffff 25%, #ffffff 50%, #f2f2f2 50%, #f2f2f2 75%, #ffffff 75%, #ffffff 100%);
+    background-size: 20px 20px;
+}
+
+/* Glassmorphism Card */
+.glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+/* Hero Overlay */
+.hero-overlay {
+    background: linear-gradient(90deg, rgba(15, 28, 63, 0.95) 0%, rgba(15, 28, 63, 0.8) 50%, rgba(15, 28, 63, 0.4) 100%);
+}
+
+/* Hover Glow */
+.hover-glow {
+    transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 15px rgba(230, 57, 70, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Image Aspect Ratio */
+.aspect-w-16 {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+}
+
+.aspect-w-16 img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+/* Modal Transitions */
+.modal-enter {
+    opacity: 0;
+    transform: scale(0.9);
+}
+.modal-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+.modal-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+.modal-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.2s ease-in, transform 0.2s ease-in;
+}
+
+[x-cloak] { display: none !important; }
