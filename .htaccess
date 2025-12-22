@@ -1,0 +1,23 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# 1. Redirect /index.html and /index to the root /
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.(html|php|htm)\ HTTP/
+RewriteRule ^index\.(html|php|htm)$ / [R=301,L]
+
+# 2. Redirect any request with .html extension to the extensionless version
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.+)\.html\ HTTP/
+RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+
+# 3. Internally map extensionless URLs to .html files
+# If the requested URI is not a directory
+RewriteCond %{REQUEST_FILENAME} !-d
+# And if the URI plus .html is a real file
+RewriteCond %{REQUEST_FILENAME}\.html -f
+# Then internally rewrite it to the .html file
+RewriteRule ^([^/]+)$ $1.html [L]
+
+# 4. Handle files in subdirectories (like machines/machine-1)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(machines/.+)$ $1.html [L]
